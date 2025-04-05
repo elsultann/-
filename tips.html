@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="مزرعة بيت شلتر تقدم أفضل خدمات استضافة وتدريب الكلاب في بيئة آمنة ومريحة – احجز الآن">
+    <meta name="keywords" content="مزرعه بيت شلتر,استضافه كلاب,تدريب كلاب,بيت شلتر,مزرعه كلاب">
+    <meta name="author" content="بيت شلتر">
+<meta name="og:title" content=" مزرعة بيت شلتر - استضافة فاخرة للكلاب" />
+<meta name="og:site_name  " content="مزرعه بيت شلتر" />
+<meta name="og:image" content="log.png" />
+<meta name="og:type" content="website" />
+    <title>نصائح تربية الكلاب - مزرعة بيت شلتر</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* أنماط خاصة بصفحة النصائح */
+        .tips-section {
+            padding: 80px 0;
+            background: #f9f9f9;
+        }
+        
+        .tips-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .tab-btn {
+            padding: 10px 20px;
+            background: #e9ecef;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        
+        .tab-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+        }
+        
+        .tip-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .tip-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .tip-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .tip-body {
+            padding: 20px;
+        }
+        
+        .tip-category {
+            display: inline-block;
+            background: var(--accent-color);
+            color: #333;
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .tip-title {
+            color: var(--dark-color);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .tip-list {
+            margin-right: 10px;
+        }
+        
+        .tip-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #eee;
+            position: relative;
+            padding-right: 25px;
+        }
+        
+        .tip-list li::before {
+            content: '\f058';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            right: 0;
+            color: var(--success-color);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @media (max-width: 768px) {
+            .tips-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .tip-img {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+<nav class="main-nav">
+    <ul class="nav-list">
+        <li><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> الرئيسية</a></li>
+        <li><a href="booking.html" class="nav-link"><i class="fas fa-calendar-check"></i> حجز استضافة</a></li>
+        <li><a href="training.html" class="nav-link"><i class="fas fa-graduation-cap"></i> تدريب الكلاب</a></li>
+        <li><a href="tips.html" class="nav-link"><i class="fas fa-lightbulb"></i> نصائح تربية</a></li>
+        <li><a href="why-us.html" class="nav-link"><i class="fas fa-star"></i> لماذا تختارنا</a></li>
+        <li><a href="testimonials.html" class="nav-link"><i class="fas fa-comments"></i> آراء العملاء</a></li>
+    </ul>
+    <div class="nav-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+</nav>
+            <img src="log.png" alt="لوجو مزرعة يلطان" class="logo">
+            <h1 class="farm-name">مزرعة بيت شلتر</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="tips-section">
+            <div class="container">
+                <h2 class="section-title animate-slide-up">نصائح لتربية الكلاب</h2>
+                <p class="section-subtitle animate-slide-up delay-1">خبرة 10 اعوام في تربية الكلاب بين يديك</p>
+                
+                <div class="tips-tabs">
+                    <button class="tab-btn active" data-tab="puppy">الجراء</button>
+                    <button class="tab-btn" data-tab="adult">الكبار</button>
+                    <button class="tab-btn" data-tab="nutrition">التغذية</button>
+                    <button class="tab-btn" data-tab="health">الصحة</button>
+                    <button class="tab-btn" data-tab="behavior">السلوك</button>
+                </div>
+                
+                <div class="tab-content active" id="puppy">
+                    <div class="tips-grid">
+                        <!-- نصيحة 1 -->
+                        <div class="tip-card animate-slide-left">
+                            <img src="F1.png" alt="تربية الجراء" class="tip-img">
+                            <div class="tip-body">
+                                <span class="tip-category">الجراء</span>
+                                <h3 class="tip-title">أساسيات تربية الجراء</h3>
+                                <ul class="tip-list">
+                                    <li>ابدأ التدريب من عمر 8 أسابيع</li>
+                                    <li>استخدم التعزيز الإيجابي بالمكافآت</li>
+                                    <li>وفر مكانًا آمنًا للنوم والراحة</li>
+                                    <li>التزم بجدول التطعيمات</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- نصيحة 2 -->
+                        <div class="tip-card animate-slide-up">
+                            <img src="f2.jpeg" alt="تدريب الجراء" class="tip-img">
+                            <div class="tip-body">
+                                <span class="tip-category">الجراء</span>
+                                <h3 class="tip-title">تدريب الجراء على النظافة</h3>
+                                <ul class="tip-list">
+                                    <li>حدد مكانًا ثابتًا لقضاء الحاجة</li>
+                                    <li>استخدم نظام المكافآت الفورية</li>
+                                    <li>تجنب العقاب القاسي عند الحوادث</li>
+                                    <li>حافظ على جدول منتظم للخروج</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="adult">
+                    <div class="tips-grid">
+                        <!-- نصيحة للكلاب البالغة -->
+                        <div class="tip-card">
+                            <img src="z1.jpeg" alt="كلاب بالغة" class="tip-img">
+                            <div class="tip-body">
+                                <span class="tip-category">الكبار</span>
+                                <h3 class="tip-title">رعاية الكلاب البالغة</h3>
+                                <ul class="tip-list">
+                                    <li>وفر تمارين يومية كافية</li>
+                                    <li>حافظ على نظام غذائي متوازن</li>
+                                    <li>استمر في تدريبات الطاعة الأساسية</li>
+                                    <li>راجع الطبيب البيطري بانتظام</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="nutrition">
+                    <div class="tips-grid">
+                        <!-- نصيحة تغذية -->
+                        <div class="tip-card">
+                            <img src="e1.jpeg" alt="تغذية الكلاب" class="tip-img">
+                            <div class="tip-body">
+                                <span class="tip-category">التغذية</span>
+                                <h3 class="tip-title">أسس التغذية السليمة</h3>
+                                <ul class="tip-list">
+                                    <li>اختر طعامًا مناسبًا للعمر والسلالة</li>
+                                    <li>تجنب إعطاء بقايا طعام البشر</li>
+                                    <li>وفر ماء نظيفًا طوال اليوم</li>
+                                    <li>التزم بكميات الطعام الموصى بها</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="health">
+                    <div class="tips-grid">
+                        <!-- نصيحة صحية -->
+                        <div class="tip-card">
+                            <img src="c.jpeg" alt="صحة الكلاب" class="tip-img">
+                            <div class="tip-body">
+                                <span class="tip-category">الصحة</span>
+                                <h3 class="tip-title">الرعاية الصحية الوقائية</h3>
+                                <ul class="tip-list">
+                                    <li>الالتزام بجدول التطعيمات الدوري</li>
+                                    <li>العناية بالأسنان والأذنين بانتظام</li>
+                                    <li>تمشيط الفراء أسبوعيًا</li>
+                                    <li>مراقبة أي تغيرات في السلوك</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="behavior">
+                    <div class="tips-grid">
+                        <!-- نصيحة سلوكية -->
+                        <div class="tip-card">
+                            <img src="a.jpeg" alt="سلوك الكلاب" class="tip-img">
+                            <div class="tip-body">
+                                <span class="tip-category">السلوك</span>
+                                <h3 class="tip-title">ضبط السلوكيات غير المرغوبة</h3>
+                                <ul class="tip-list">
+                                    <li>استخدم التصحيح الهادئ والمباشر</li>
+                                    <li>كافئ السلوك الجيد فورًا</li>
+                                    <li>تجنب العقاب الجسدي</li>
+                                    <li>استشر مدربًا متخصصًا عند الحاجة</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="contact-info">
+                      <h3>تواصل معنا</h3>
+            <p><i class="fas fa-phone"></i>01149437050</p>
+<p><i class="fas fa-phone"></i> 01092933082</p>
+            <p><i class="fas fa-map-marker-alt"></i> عنوان المزرعة، مدينة الامل، امام جامع ليله القدر ,الشروق ٢</p>
+        </div>
+        <div class="social-media">
+            <a href="wa.me/201025752676"><i class="fab fa-facebook"></i></a>
+            <a href="wa.me/201025752676"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/201092933082"><i class="fab fa-whatsapp"></i></a>
+<a href="https://wa.me/201149437050"><i class="fab fa-whatsapp"></i></a>
+        </div>
+
+‎‏<footer>
+‎‏    <p>&copy; 2025 جميع الحقوق محفوظة. تمت برمجة الموقع بواسطة 
+‎‏        <a href="https://wa.me/201025752676?text=مرحبًا%20مؤمن،%20أرغب%20في%20معرفة%20المزيد%20عن%20موقعك." target="_blank">
+‎‏            cure marketer 
+‎‏        </a>
+‎‏        <a href="https://wa.me/201025752676?text=مرحبًا%20مؤمن،%20أرغب%20في%20معرفة%20المزيد%20عن%20موقعك." target="_blank">
+‎‏         اضغط هنا للحصول علي موقع مشابه 
+</a>
+‎‏    </p>
+‎‏</footer>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // تبديل تبويبات النصائح
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // إزالة النشاط من جميع الأزرار
+                document.querySelectorAll('.tab-btn').forEach(b => {
+                    b.classList.remove('active');
+                });
+                
+                // إضافة النشاط للزر المحدد
+                btn.classList.add('active');
+                
+                // إخفاء جميع المحتويات
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                
+                // إظهار المحتوى المحدد
+                const tabId = btn.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
