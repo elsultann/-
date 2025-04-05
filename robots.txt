@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pitsltter.github.io/-/sitemap.xml
