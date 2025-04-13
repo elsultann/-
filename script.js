@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
         welcomeMessage.className = 'welcome-message';
         welcomeMessage.innerHTML = `
             <div class="welcome-content">
-                <h3>مرحباً بك في مزرعة السلطات!</h3>
+                <h3>مرحباً بك في مزرعة السلطان!</h3>
                 <p>نحن هنا لرعاية كلبك بأفضل طريقة ممكنة</p>
                 <button class="close-welcome">حسناً</button>
             </div>
